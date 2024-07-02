@@ -1,0 +1,27 @@
+# Swapping of numbers
+# num1 = 2
+# num2 = 3
+
+# num1 = num1+num2
+# num2 = num1-num2
+# num1 = num1-num2
+# print(num1, num2)
+
+# This uses two pointer method to solve the sorting problem
+
+nums = [9,8,7,6,5,4,3,2,1]
+
+print("before Swapping")
+print(nums)
+
+left = 0
+right = len(nums)-1
+while left < right:
+    nums[left] = nums[left]+nums[right]
+    nums[right] = nums[left]-nums[right]
+    nums[left] = nums[left]-nums[right]
+    left += 1
+    right -=1
+
+print("After Swapping")
+print(nums)
